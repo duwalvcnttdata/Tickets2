@@ -8,7 +8,7 @@
 import Foundation
 
 protocol EventoDetallePresenterViewProtocol{
-    
+    func mostrarBackVista()
 }
 
 protocol EventoDetallePresenterRouterProtocol{
@@ -21,7 +21,9 @@ class EventoDetallePresenter{
 }
 
 extension EventoDetallePresenter: EventoDetallePresenterViewProtocol{
-    
+    func mostrarBackVista(){
+        router?.mostrarBackVista()
+    }
 }
 
 extension EventoDetallePresenter: EventoDetallePresenterRouterProtocol{

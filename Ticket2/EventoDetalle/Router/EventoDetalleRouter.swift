@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol EventoDetalleRouterProtocol{
-    
+    func mostrarBackVista()
 }
 
 class EventoDetalleRouter{
@@ -18,5 +18,7 @@ class EventoDetalleRouter{
 }
 
 extension EventoDetalleRouter: EventoDetalleRouterProtocol{
-    
+    func mostrarBackVista(){
+        view?.navigationController?.popToRootViewController(animated: true)
+    }
 }

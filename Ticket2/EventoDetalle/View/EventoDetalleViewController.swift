@@ -25,7 +25,14 @@ class EventoDetalleViewController: UIViewController {
     @IBOutlet weak var resumenLabel: UILabel!
     
     @IBAction func obtenerTicket(_ sender: Any) {
+        let alerta = UIAlertController(title: "Exito!", message: "Adquirio Ticket", preferredStyle: UIAlertController.Style.actionSheet)
+        let accion1 = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { _ in
+            self.presenter?.mostrarBackVista()
+        }
         
+        alerta.addAction(accion1)
+
+        self.present(alerta, animated: true)
     }
     
     var evento: EventoEntity?
