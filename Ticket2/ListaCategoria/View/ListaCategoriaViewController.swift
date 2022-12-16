@@ -13,7 +13,7 @@ protocol ListaCategoriaViewControllerProtocol{
 
 class ListaCategoriaViewController: UIViewController {
     
-    var categoria: CategoriaEntity?
+    var categoria: CategoriaEntity!
     
     var listaEventos: [EventoEntity] = [ ]
     
@@ -27,6 +27,7 @@ class ListaCategoriaViewController: UIViewController {
         eventosTableView.delegate = self
         
         presenter?.fetchDatosInteractor(categoriaID: categoria!.codigo)
+        print("\(String(describing: categoria?.codigo))")
     }
 
 }
@@ -53,6 +54,6 @@ extension ListaCategoriaViewController: UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("acciono la celda")
+        presenter?.presentarEventoDetalleRouter(evento: listaEventos[indexPath.row])
     }
 }

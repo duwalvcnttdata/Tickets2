@@ -23,7 +23,10 @@ extension ListaCategoriaIteractor: ListaCategoriaIteractorProtocol{
         api?.fetchEventos({ eventos, error in
             if let eventos = eventos {
                 let eventosEntity = EventoEntity.mostrar(eventos)
+                print(eventosEntity)
                 self.presenter?.montarEventos(eventos: eventosEntity)
+            }else{
+                print(error ?? "erro =/")
             }
         }, categoriaID: categoriaID)
         

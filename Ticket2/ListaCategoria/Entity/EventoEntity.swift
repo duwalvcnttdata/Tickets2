@@ -9,6 +9,8 @@ import Foundation
 
 struct EventoEntity {
     let nombre: String
+    let comentario: String
+    let imagen: String
     let categoriaID: Int
     let organizador: String
     let ubicacion: String
@@ -16,6 +18,6 @@ struct EventoEntity {
     let resumen: String
     
     static func mostrar(_ eventos: [EventoResponse]) -> [EventoEntity]{
-        eventos.map { EventoEntity(nombre: $0.nombre, categoriaID: $0.categoriaID, organizador: $0.organizador, ubicacion: $0.ubicacion, fecha: $0.fecha, resumen: $0.resumen)}
+        eventos.map { EventoEntity(nombre: $0.nombre, comentario: $0.comentario, imagen: $0.imagen, categoriaID: $0.categoriaID, organizador: $0.organizador, ubicacion: $0.ubicacion, fecha: $0.fecha, resumen: $0.resumen)}
     }
 }

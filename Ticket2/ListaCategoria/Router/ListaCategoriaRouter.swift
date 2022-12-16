@@ -10,7 +10,7 @@ import UIKit
 
 
 protocol ListaCategoriaRouterProtocol{
-    
+    func presentarEventoDetalle(evento: EventoEntity)
 }
 
 class ListaCategoriaRouter{
@@ -19,5 +19,9 @@ class ListaCategoriaRouter{
 }
 
 extension ListaCategoriaRouter: ListaCategoriaRouterProtocol{
+    
+    func presentarEventoDetalle(evento: EventoEntity){
+        view?.navigationController?.pushViewController(EventoDetalleConfigurator.mostrarViewController(evento: evento), animated: true)
+    }
     
 }

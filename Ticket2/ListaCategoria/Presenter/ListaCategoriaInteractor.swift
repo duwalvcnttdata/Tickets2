@@ -17,6 +17,7 @@ protocol ListaCategoriaPresenterRouterProtocol{
 
 protocol ListaCategoriaPresenterViewProtocol{
     func fetchDatosInteractor(categoriaID: Int)
+    func presentarEventoDetalleRouter(evento: EventoEntity)
 }
 
 class ListaCategoriaPresenter{
@@ -42,5 +43,8 @@ extension ListaCategoriaPresenter: ListaCategoriaPresenterViewProtocol{
         interactor?.fetchDatos(categoriaID: categoriaID)
     }
     
+    func presentarEventoDetalleRouter(evento: EventoEntity) {
+        router?.presentarEventoDetalle(evento: evento)
+    }
     
 }
