@@ -25,5 +25,23 @@ class CategoriasAPI: CategoriasApiProtocol {
         }
     }
     
+}
+
+protocol EventosApiProtocol{
+    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void, categoriaID: Int)
+}
+
+class EventosAPI: EventosApiProtocol{
     
+    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void, categoriaID: Int) {
+        print("http://localhost:3000/categorias/\(categoriaID)/eventos")
+        AF.request("http://localhost:3000/categorias/\(categoriaID)/eventos").responseDecodable(of: [EventoResponse].self) { response in
+            switch response.result {
+            case .success(let categorias):
+                completion(categorias, nil)
+            case .failure(let error):
+                completion(nil, error.localizedDescription)
+            }
+        }
+    }
 }

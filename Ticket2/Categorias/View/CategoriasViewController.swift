@@ -55,7 +55,7 @@ extension CategoriasViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("accion de celda -> tableviewdelegate")
-        presenter?.solicitaPresentarListaCategoria()
+        presenter?.solicitaPresentarListaCategoria(categoria: listadoCategoria[indexPath.row])
     }
     
 }

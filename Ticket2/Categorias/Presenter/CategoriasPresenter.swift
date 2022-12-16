@@ -12,12 +12,12 @@ protocol CategoriasPresenterInteractorProtocol{
 }
 
 protocol CategoriasPresenterRouterProtocol{
-    func presentarListadoCategoria()
+    func presentarListadoCategoria(categoria: CategoriaEntity)
 }
 
 protocol CategoriasPresenterViewProtocol{
     func obtenerCategorias()
-    func solicitaPresentarListaCategoria()
+    func solicitaPresentarListaCategoria(categoria: CategoriaEntity)
 }
 
 class CategoriasPresenter {
@@ -33,8 +33,8 @@ extension CategoriasPresenter: CategoriasPresenterInteractorProtocol{
 }
 
 extension CategoriasPresenter: CategoriasPresenterRouterProtocol{
-    func presentarListadoCategoria(){
-        router?.presentarListaCategoria()
+    func presentarListadoCategoria(categoria: CategoriaEntity){
+        router?.presentarListaCategoria(categoria: categoria)
     }
 }
 
@@ -43,7 +43,7 @@ extension CategoriasPresenter: CategoriasPresenterViewProtocol{
         interactor?.fetchDatos()
     }
     
-    func solicitaPresentarListaCategoria(){
-        presentarListadoCategoria()
+    func solicitaPresentarListaCategoria(categoria: CategoriaEntity){
+        presentarListadoCategoria(categoria: categoria)
     }
 }

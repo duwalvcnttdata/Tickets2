@@ -8,7 +8,7 @@
 import Foundation
 
 struct CategoriaEntity{
-    let codigo: String
+    let codigo: Int
     let nombre: String
     
     static func mostrar(_ categorias: [CategoriaResponse]) -> [CategoriaEntity]{

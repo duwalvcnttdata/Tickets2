@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol CategoriasRouterProtocol {
-    func presentarListaCategoria()
+    func presentarListaCategoria(categoria: CategoriaEntity)
 }
 
 class CategoriasRouter: CategoriasRouterProtocol{
@@ -17,8 +17,8 @@ class CategoriasRouter: CategoriasRouterProtocol{
     var view: UIViewController?
     var presenter: CategoriasPresenterRouterProtocol?
     
-    func presentarListaCategoria(){
+    func presentarListaCategoria(categoria: CategoriaEntity){
         print("presentarListaCategoria()")
-        view?.navigationController?.pushViewController(ListaCategoriaConfigurator.mostrarViewController(), animated: true)
+        view?.navigationController?.pushViewController(ListaCategoriaConfigurator.mostrarViewController(categoria: categoria), animated: true)
     }
 }

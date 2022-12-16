@@ -25,6 +25,10 @@
 		6DC11FE2294BBE9900F8E57C /* ListaCategoriaConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FE1294BBE9900F8E57C /* ListaCategoriaConfigurator.swift */; };
 		6DC11FE5294BBF2600F8E57C /* ListaCategoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FE4294BBF2600F8E57C /* ListaCategoriaViewController.swift */; };
 		6DC11FE7294BE92A00F8E57C /* EventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FE6294BE92A00F8E57C /* EventoTableViewCell.swift */; };
+		6DC11FEA294BF43500F8E57C /* EventoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FE9294BF43500F8E57C /* EventoEntity.swift */; };
+		6DC11FEF294C00AA00F8E57C /* ListaCategoriaIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FEE294C00AA00F8E57C /* ListaCategoriaIteractor.swift */; };
+		6DC11FF1294C037E00F8E57C /* ListaCategoriaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FF0294C037E00F8E57C /* ListaCategoriaInteractor.swift */; };
+		6DC11FF3294C05B700F8E57C /* ListaCategoriaRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FF2294C05B700F8E57C /* ListaCategoriaRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +51,10 @@
 		6DC11FE1294BBE9900F8E57C /* ListaCategoriaConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriaConfigurator.swift; sourceTree = "<group>"; };
 		6DC11FE4294BBF2600F8E57C /* ListaCategoriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriaViewController.swift; sourceTree = "<group>"; };
 		6DC11FE6294BE92A00F8E57C /* EventoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoTableViewCell.swift; sourceTree = "<group>"; };
+		6DC11FE9294BF43500F8E57C /* EventoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoEntity.swift; sourceTree = "<group>"; };
+		6DC11FEE294C00AA00F8E57C /* ListaCategoriaIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriaIteractor.swift; sourceTree = "<group>"; };
+		6DC11FF0294C037E00F8E57C /* ListaCategoriaInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriaInteractor.swift; sourceTree = "<group>"; };
+		6DC11FF2294C05B700F8E57C /* ListaCategoriaRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCategoriaRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +185,10 @@
 			children = (
 				6DC11FE0294BBE7C00F8E57C /* Configurator */,
 				6DC11FE3294BBEFA00F8E57C /* View */,
+				6DC11FED294BF96400F8E57C /* Interactor */,
+				6DC11FEC294BF95500F8E57C /* Presenter */,
+				6DC11FE8294BF41200F8E57C /* Entity */,
+				6DC11FEB294BF94C00F8E57C /* Router */,
 			);
 			path = ListaCategoria;
 			sourceTree = "<group>";
@@ -196,6 +208,38 @@
 				6DC11FE6294BE92A00F8E57C /* EventoTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6DC11FE8294BF41200F8E57C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				6DC11FE9294BF43500F8E57C /* EventoEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6DC11FEB294BF94C00F8E57C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6DC11FF2294C05B700F8E57C /* ListaCategoriaRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6DC11FEC294BF95500F8E57C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6DC11FF0294C037E00F8E57C /* ListaCategoriaInteractor.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6DC11FED294BF96400F8E57C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6DC11FEE294C00AA00F8E57C /* ListaCategoriaIteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +329,11 @@
 				6DC11FD3294AC41500F8E57C /* CategoriaEntity.swift in Sources */,
 				6DC11FE5294BBF2600F8E57C /* ListaCategoriaViewController.swift in Sources */,
 				6DC11FD1294AB25500F8E57C /* CategoriasConfigurator.swift in Sources */,
+				6DC11FF1294C037E00F8E57C /* ListaCategoriaInteractor.swift in Sources */,
 				6DC11FE7294BE92A00F8E57C /* EventoTableViewCell.swift in Sources */,
+				6DC11FEF294C00AA00F8E57C /* ListaCategoriaIteractor.swift in Sources */,
+				6DC11FEA294BF43500F8E57C /* EventoEntity.swift in Sources */,
+				6DC11FF3294C05B700F8E57C /* ListaCategoriaRouter.swift in Sources */,
 				6DC11FC9294AA8AB00F8E57C /* CategoriasViewController.swift in Sources */,
 				6DC11FCD294AB1E500F8E57C /* CategoriasIteractor.swift in Sources */,
 				6DC11FD6294AC99200F8E57C /* CategoriaResponse.swift in Sources */,

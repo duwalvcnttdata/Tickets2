@@ -17,8 +17,6 @@ class EventoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var fechaLabel: UILabel!
     
-    var evento: EventoEntity?
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -30,10 +28,10 @@ class EventoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func asignarDatosDeEvento(){
-        nombreLabel.text = evento?.nombre
-        organizadorLabel.text = evento?.organizador
-        ubicacionLabel.text = evento?.ubicacion
-        fechaLabel.text = evento?.fecha
+    func asignarDatosDeEvento(evento: EventoEntity){
+        nombreLabel.text = evento.nombre
+        organizadorLabel.text = evento.organizador
+        ubicacionLabel.text = evento.ubicacion
+        fechaLabel.text = evento.fecha
     }
 }

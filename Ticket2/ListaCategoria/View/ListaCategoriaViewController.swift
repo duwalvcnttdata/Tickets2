@@ -7,32 +7,39 @@
 
 import UIKit
 
-struct EventoEntity {
-    let nombre: String
-    let organizador: String
-    let ubicacion: String
-    let fecha: String
-    let resumen: String
+protocol ListaCategoriaViewControllerProtocol{
+    func mostrarListadoEventos(_ listaEventos: [EventoEntity])
 }
 
 class ListaCategoriaViewController: UIViewController {
     
     var categoria: CategoriaEntity?
-    var listaEventos: [EventoEntity] = [
-        EventoEntity(nombre: "Wakanda Forever1", organizador: "Cineplanet1", ubicacion: "Av. Ejercito 1001", fecha: "28 - Oct - 00:01", resumen: "Resumen 1"),
-        EventoEntity(nombre: "Wakanda Forever2", organizador: "Cineplanet2", ubicacion: "Av. Ejercito 1002", fecha: "28 - Oct - 00:02", resumen: "Resumen 2")
-    ]
+    
+    var listaEventos: [EventoEntity] = [ ]
+    
+    var presenter: ListaCategoriaPresenterViewProtocol?
 
     @IBOutlet weak var eventosTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        eventosTableView.dataSource = self
+        eventosTableView.delegate = self
+        
+        presenter?.fetchDatosInteractor(categoriaID: categoria!.codigo)
     }
 
 }
 
-extension ListaCategoriaViewController: UITableViewDataSource{
+extension ListaCategoriaViewController: ListaCategoriaViewControllerProtocol{
+    func mostrarListadoEventos(_ listaEventos: [EventoEntity]) {
+        self.listaEventos = listaEventos
+        eventosTableView.reloadData()
+    }
+    
+}
+
+extension ListaCategoriaViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         listaEventos.count
     }
@@ -41,7 +48,7 @@ extension ListaCategoriaViewController: UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "celdaEventoCompradoIdentifier") as? EventoTableViewCell else {
             return EventoTableViewCell()
         }
-        cell.evento = listaEventos[indexPath.row]
+        cell.asignarDatosDeEvento(evento: listaEventos[indexPath.row])
         return cell
     }
     

@@ -11,13 +11,16 @@ protocol CategoriasInteractorProtocol{
     func fetchDatos()
 }
 
-class CategoriasInteractor: CategoriasInteractorProtocol{
+class CategoriasInteractor{
     
     /// Viper
     var presenter: CategoriasPresenterInteractorProtocol?
     
     var api: CategoriasApiProtocol?
     
+}
+
+extension CategoriasInteractor: CategoriasInteractorProtocol{
     func fetchDatos()  {
         api?.fetchCategorias({ categorias, error in
             if let categorias = categorias {
@@ -26,8 +29,5 @@ class CategoriasInteractor: CategoriasInteractorProtocol{
             }
         })
         
-    
     }
-    
-    
 }
