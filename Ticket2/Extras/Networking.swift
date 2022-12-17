@@ -29,6 +29,8 @@ class CategoriasAPI: CategoriasApiProtocol {
 
 protocol EventosApiProtocol{
     func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void, categoriaID: Int)
+    
+    func fetchPostEvento(_ completion: @escaping(EventoResponse?, String?) -> Void, evento: EventoEntity)
 }
 
 class EventosAPI: EventosApiProtocol{
@@ -43,4 +45,39 @@ class EventosAPI: EventosApiProtocol{
             }
         }
     }
+    
+    func fetchPostEvento(_ completion: @escaping(EventoResponse?, String?) -> Void, evento: EventoEntity) {
+        AF.request("http://localhost:3000/ticketsUsuario", method: .post, parameters: evento, encoder: JSONParameterEncoder.default).responseDecodable(of: EventoResponse.self) { response in
+            
+            print("-----")
+            print(response)
+            print("-----")
+            print(evento)
+            
+            switch response.result {
+            case .success(let categoria):
+                completion(categoria, nil)
+            case .failure(let error):
+                completion(nil, error.localizedDescription)
+            }
+        }
+    }
 }
+
+//protocol TicketsUsuarioApiProtocol{
+//    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void)
+//}
+//
+//class TicketsUsuarioAPI: TicketsUsuarioApiProtocol{
+//
+//    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void) {
+//        AF.request("http://localhost:3000/ticketsUsuario").responseDecodable(of: [EventoResponse].self) { response in
+//            switch response.result {
+//            case .success(let categorias):
+//                completion(categorias, nil)
+//            case .failure(let error):
+//                completion(nil, error.localizedDescription)
+//            }
+//        }
+//    }
+//}

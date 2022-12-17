@@ -10,6 +10,11 @@ class EventoDetalleConfigurator{
         let presenter = EventoDetallePresenter()
         let router = EventoDetalleRouter()
 
+        let interactor = EventoDetalleIteractor()
+        
+        interactor.api = EventosAPI()
+        interactor.presenter = presenter
+        
         view.evento = evento
         view.presenter = presenter
 
@@ -18,6 +23,7 @@ class EventoDetalleConfigurator{
 
         presenter.router = router
         presenter.view = view
+        presenter.interactor = interactor
         
         
         

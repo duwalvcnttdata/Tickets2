@@ -20,12 +20,12 @@ struct CategoriaResponse: Codable {
 
 struct EventoResponse: Codable {
     let codigo, comentario, imagen: String
-    let categoriaID: Int
+    let categoriaId: Int
     let nombre, organizador, ubicacion, fecha, resumen: String
 
     enum CodingKeys: String, CodingKey {
         case codigo, comentario, imagen
-        case categoriaID = "categoriaId"
+        case categoriaId
         case nombre, organizador, ubicacion, fecha, resumen
     }
 }

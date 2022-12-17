@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D2DD35F294CDDF600D73672 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6D2DD35E294CDDF600D73672 /* Kingfisher */; };
+		6D2DD361294D06A300D73672 /* EventoDetalleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD360294D06A300D73672 /* EventoDetalleInteractor.swift */; };
 		6DC11FAE294AA77600F8E57C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FAD294AA77600F8E57C /* AppDelegate.swift */; };
 		6DC11FB0294AA77600F8E57C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FAF294AA77600F8E57C /* SceneDelegate.swift */; };
 		6DC11FB5294AA77600F8E57C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC11FB3294AA77600F8E57C /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D2DD360294D06A300D73672 /* EventoDetalleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDetalleInteractor.swift; sourceTree = "<group>"; };
 		6DC11FAA294AA77600F8E57C /* Ticket2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticket2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC11FAD294AA77600F8E57C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DC11FAF294AA77600F8E57C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 		6DC11FF8294C1ED100F8E57C /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				6D2DD360294D06A300D73672 /* EventoDetalleInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				6DC11FD6294AC99200F8E57C /* CategoriaResponse.swift in Sources */,
 				6DC11FFC294C1F4800F8E57C /* EventoDetalleViewController.swift in Sources */,
 				6DF60730294C220E0098E802 /* EventoDetalleConfigurator.swift in Sources */,
+				6D2DD361294D06A300D73672 /* EventoDetalleInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

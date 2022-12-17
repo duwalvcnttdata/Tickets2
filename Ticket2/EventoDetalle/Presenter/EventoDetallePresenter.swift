@@ -8,24 +8,43 @@
 import Foundation
 
 protocol EventoDetallePresenterViewProtocol{
-    func mostrarBackVista()
+    func fetchObtenerEvento(evento: EventoEntity)
+    func presentarVistaRoot()
 }
 
 protocol EventoDetallePresenterRouterProtocol{
     
 }
 
+protocol EventoDetallePresenterInteractorProtocol{
+    func mostrarAlerta()
+}
+
 class EventoDetallePresenter{
     var view: EventoDetalleViewControllerProtocol?
     var router: EventoDetalleRouterProtocol?
+    var interactor: EventoDetalleInteractorProtocol?
 }
 
 extension EventoDetallePresenter: EventoDetallePresenterViewProtocol{
-    func mostrarBackVista(){
-        router?.mostrarBackVista()
+    func presentarVistaRoot() {
+        router?.presentarVistaRoot()
     }
+    
+    func fetchObtenerEvento(evento: EventoEntity) {
+        interactor?.fetchPostDatos(evento: evento)
+    }
+    
 }
 
 extension EventoDetallePresenter: EventoDetallePresenterRouterProtocol{
+    
+}
+
+extension EventoDetallePresenter: EventoDetallePresenterInteractorProtocol{
+    func mostrarAlerta() {
+        view?.mostrarAlerta()
+    }
+    
     
 }

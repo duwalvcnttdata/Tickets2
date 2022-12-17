@@ -10,6 +10,7 @@ import Kingfisher
 
 protocol EventoDetalleViewControllerProtocol{
     func montarDatos(evento: EventoEntity)
+    func mostrarAlerta()
 }
 
 class EventoDetalleViewController: UIViewController {
@@ -25,14 +26,11 @@ class EventoDetalleViewController: UIViewController {
     @IBOutlet weak var resumenLabel: UILabel!
     
     @IBAction func obtenerTicket(_ sender: Any) {
-        let alerta = UIAlertController(title: "Exito!", message: "Adquirio Ticket", preferredStyle: UIAlertController.Style.actionSheet)
-        let accion1 = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { _ in
-            self.presenter?.mostrarBackVista()
+        
+        if let evento = evento {
+            presenter?.fetchObtenerEvento(evento: evento)
         }
         
-        alerta.addAction(accion1)
-
-        self.present(alerta, animated: true)
     }
     
     var evento: EventoEntity?
@@ -48,6 +46,17 @@ class EventoDetalleViewController: UIViewController {
 }
 
 extension EventoDetalleViewController: EventoDetalleViewControllerProtocol{
+    func mostrarAlerta() {
+        let alerta = UIAlertController(title: "Exito!", message: "Adquirio Ticket", preferredStyle: UIAlertController.Style.actionSheet)
+        let accion1 = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { _ in
+            self.presenter?.presentarVistaRoot()
+        }
+
+        alerta.addAction(accion1)
+
+        self.present(alerta, animated: true)
+    }
+    
     func montarDatos(evento: EventoEntity){
         nombreLabel.text = evento.nombre
         comentarioLabel.text = evento.comentario
