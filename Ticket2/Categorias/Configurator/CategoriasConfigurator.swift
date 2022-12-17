@@ -18,12 +18,12 @@ class CategoriasConfigurator{
         
         view.presenter = presenter
         
-        let interactor = CategoriasInteractor(presenter: presenter, api: CategoriasAPI())
+        let interactor = CategoriasInteractor(presenter: presenter, api: TicketsAPI())
+        presenter.interactor = interactor
         
         let router = CategoriasRouter(view: view, presenter: presenter)
-        
-        presenter.interactor = interactor
         presenter.router = router
+        
         presenter.view = view
         
         

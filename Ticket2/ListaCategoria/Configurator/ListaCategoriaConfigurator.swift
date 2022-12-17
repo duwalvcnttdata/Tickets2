@@ -12,7 +12,7 @@ class ListaCategoriaConfigurator{
         view.categoria = categoria
         view.presenter = presenter
 
-        let interactor = ListaCategoriaIteractor(presenter: presenter, api: EventosAPI())
+        let interactor = ListaCategoriaIteractor(presenter: presenter, api: TicketsAPI())
 
         
         let router = ListaCategoriaRouter(view: view, presenter: presenter)

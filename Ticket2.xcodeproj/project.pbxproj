@@ -15,6 +15,8 @@
 		6D2DD376294D8D1900D73672 /* ListaMisTicketsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD375294D8D1900D73672 /* ListaMisTicketsPresenter.swift */; };
 		6D2DD378294D8D4000D73672 /* ListaMisTicketsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD377294D8D4000D73672 /* ListaMisTicketsRouter.swift */; };
 		6D2DD37A294D920D00D73672 /* MiEventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD379294D920D00D73672 /* MiEventoTableViewCell.swift */; };
+		6D2DD37D294E03FD00D73672 /* DetalleTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD37C294E03FD00D73672 /* DetalleTicketViewController.swift */; };
+		6D2DD37F294E051500D73672 /* DetalleTicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD37E294E051500D73672 /* DetalleTicketTableViewCell.swift */; };
 		6DC11FAE294AA77600F8E57C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FAD294AA77600F8E57C /* AppDelegate.swift */; };
 		6DC11FB0294AA77600F8E57C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FAF294AA77600F8E57C /* SceneDelegate.swift */; };
 		6DC11FB5294AA77600F8E57C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC11FB3294AA77600F8E57C /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		6D2DD375294D8D1900D73672 /* ListaMisTicketsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMisTicketsPresenter.swift; sourceTree = "<group>"; };
 		6D2DD377294D8D4000D73672 /* ListaMisTicketsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMisTicketsRouter.swift; sourceTree = "<group>"; };
 		6D2DD379294D920D00D73672 /* MiEventoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEventoTableViewCell.swift; sourceTree = "<group>"; };
+		6D2DD37C294E03FD00D73672 /* DetalleTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTicketViewController.swift; sourceTree = "<group>"; };
+		6D2DD37E294E051500D73672 /* DetalleTicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleTicketTableViewCell.swift; sourceTree = "<group>"; };
 		6DC11FAA294AA77600F8E57C /* Ticket2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticket2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC11FAD294AA77600F8E57C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DC11FAF294AA77600F8E57C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +158,15 @@
 			path = Configurator;
 			sourceTree = "<group>";
 		};
+		6D2DD37B294E03B600D73672 /* DetalleTicketViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DD37C294E03FD00D73672 /* DetalleTicketViewController.swift */,
+				6D2DD37E294E051500D73672 /* DetalleTicketTableViewCell.swift */,
+			);
+			path = DetalleTicketViewController;
+			sourceTree = "<group>";
+		};
 		6DC11FA1294AA77500F8E57C = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +186,7 @@
 		6DC11FAC294AA77600F8E57C /* Ticket2 */ = {
 			isa = PBXGroup;
 			children = (
+				6D2DD37B294E03B600D73672 /* DetalleTicketViewController */,
 				6DC11FD7294AC9B100F8E57C /* Extras */,
 				6DC11FD4294AC94200F8E57C /* Resources */,
 				6DC11FC1294AA83400F8E57C /* Categorias */,
@@ -488,7 +502,9 @@
 				6DC11FE7294BE92A00F8E57C /* EventoTableViewCell.swift in Sources */,
 				6DC11FEF294C00AA00F8E57C /* ListaCategoriaIteractor.swift in Sources */,
 				6DC11FEA294BF43500F8E57C /* EventoEntity.swift in Sources */,
+				6D2DD37D294E03FD00D73672 /* DetalleTicketViewController.swift in Sources */,
 				6DC11FF3294C05B700F8E57C /* ListaCategoriaRouter.swift in Sources */,
+				6D2DD37F294E051500D73672 /* DetalleTicketTableViewCell.swift in Sources */,
 				6DC11FC9294AA8AB00F8E57C /* CategoriasViewController.swift in Sources */,
 				6DF6072E294C21CC0098E802 /* EventoDetalleRouter.swift in Sources */,
 				6DC11FCD294AB1E500F8E57C /* CategoriasIteractor.swift in Sources */,

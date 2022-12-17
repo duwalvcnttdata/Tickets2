@@ -28,7 +28,7 @@ extension EventoDetalleIteractor: EventoDetalleInteractorProtocol{
     func fetchPostDatos(evento: EventoEntity)  {
         api?.fetchPostEvento({ evento, error in
             if let evento = evento {
-                let eventoEntity = EventoEntity.mostrar([evento])
+                let _ = EventoEntity.mostrar([evento])
                 self.presenter?.mostrarAlerta()
             }else{
                 print((String(describing: error)))

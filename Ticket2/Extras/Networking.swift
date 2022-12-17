@@ -13,7 +13,22 @@ protocol CategoriasApiProtocol{
 
 }
 
-class CategoriasAPI: CategoriasApiProtocol {
+protocol EventosApiProtocol{
+    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void, categoriaID: Int)
+    
+    func fetchPostEvento(_ completion: @escaping(EventoResponse?, String?) -> Void, evento: EventoEntity)
+}
+
+protocol ListaMisTicketsApiProtocol{
+    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void)
+}
+
+
+class TicketsAPI {
+    
+}
+
+extension TicketsAPI: CategoriasApiProtocol{
     func fetchCategorias(_ completion: @escaping([CategoriaResponse]?, String?) -> Void ) {
         AF.request("http://localhost:3000/categorias").responseDecodable(of: [CategoriaResponse].self) { response in
             switch response.result {
@@ -24,17 +39,9 @@ class CategoriasAPI: CategoriasApiProtocol {
             }
         }
     }
-    
 }
 
-protocol EventosApiProtocol{
-    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void, categoriaID: Int)
-    
-    func fetchPostEvento(_ completion: @escaping(EventoResponse?, String?) -> Void, evento: EventoEntity)
-}
-
-class EventosAPI: EventosApiProtocol{
-    
+extension TicketsAPI: EventosApiProtocol{
     func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void, categoriaID: Int) {
         AF.request("http://localhost:3000/categorias/\(categoriaID)/eventos").responseDecodable(of: [EventoResponse].self) { response in
             switch response.result {
@@ -59,12 +66,7 @@ class EventosAPI: EventosApiProtocol{
     }
 }
 
-protocol ListaMisTicketsApiProtocol{
-    func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void)
-}
-
-class ListaMisTicketsAPI: ListaMisTicketsApiProtocol{
-
+extension TicketsAPI: ListaMisTicketsApiProtocol{
     func fetchEventos(_ completion: @escaping([EventoResponse]?, String?) -> Void) {
         AF.request("http://localhost:3000/ticketsUsuario").responseDecodable(of: [EventoResponse].self) { response in
             switch response.result {

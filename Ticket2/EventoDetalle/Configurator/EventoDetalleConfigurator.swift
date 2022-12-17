@@ -9,7 +9,7 @@ class EventoDetalleConfigurator{
         }
         let presenter = EventoDetallePresenter()
 
-        let interactor = EventoDetalleIteractor(presenter: presenter, api: EventosAPI())
+        let interactor = EventoDetalleIteractor(presenter: presenter, api: TicketsAPI())
         
         view.evento = evento
         view.presenter = presenter

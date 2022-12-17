@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ListaMisTicketsRouterProtocol{
     func presentarDetalle(evento: EventoEntity)
@@ -25,6 +26,11 @@ class ListaMisTicketsRouter{
 
 extension ListaMisTicketsRouter: ListaMisTicketsRouterProtocol{
     func presentarDetalle(evento: EventoEntity){
-        print("llegue")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let detalleTicketView = mainStoryboard.instantiateViewController(withIdentifier: "detalleTicketStoryboard") as? DetalleTicketViewController else {
+            return
+        }
+        detalleTicketView.evento = evento
+        view?.navigationController?.pushViewController(detalleTicketView, animated: true)
     }
 }

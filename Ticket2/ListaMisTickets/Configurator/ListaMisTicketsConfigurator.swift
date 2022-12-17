@@ -18,7 +18,7 @@ class ListaMisTicketsConfigurator{
 
         view.presenter = presenter
 
-        let interactor = ListaMisTicketsInteractor(api: ListaMisTicketsAPI(), presenter: presenter)
+        let interactor = ListaMisTicketsInteractor(api: TicketsAPI(), presenter: presenter)
 
         let router = ListaMisTicketsRouter(view: view, presenter: presenter)
 
