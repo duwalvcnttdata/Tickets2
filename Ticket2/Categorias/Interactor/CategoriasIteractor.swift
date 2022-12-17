@@ -14,9 +14,14 @@ protocol CategoriasInteractorProtocol{
 class CategoriasInteractor{
     
     /// Viper
-    var presenter: CategoriasPresenterInteractorProtocol?
+    weak var presenter: CategoriasPresenterInteractorProtocol?
     
     var api: CategoriasApiProtocol?
+    
+    init(presenter: CategoriasPresenterInteractorProtocol? = nil, api: CategoriasApiProtocol? = nil) {
+        self.presenter = presenter
+        self.api = api
+    }
     
 }
 

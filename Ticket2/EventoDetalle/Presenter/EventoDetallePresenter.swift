@@ -12,16 +12,16 @@ protocol EventoDetallePresenterViewProtocol{
     func presentarVistaRoot()
 }
 
-protocol EventoDetallePresenterRouterProtocol{
+protocol EventoDetallePresenterRouterProtocol: AnyObject{
     
 }
 
-protocol EventoDetallePresenterInteractorProtocol{
+protocol EventoDetallePresenterInteractorProtocol: AnyObject{
     func mostrarAlerta()
 }
 
 class EventoDetallePresenter{
-    var view: EventoDetalleViewControllerProtocol?
+    weak var view: EventoDetalleViewControllerProtocol?
     var router: EventoDetalleRouterProtocol?
     var interactor: EventoDetalleInteractorProtocol?
 }

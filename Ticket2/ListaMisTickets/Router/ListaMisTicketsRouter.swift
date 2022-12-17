@@ -12,8 +12,15 @@ protocol ListaMisTicketsRouterProtocol{
 }
 
 class ListaMisTicketsRouter{
-    var view: ListaMisTicketsViewController?
-    var presenter: ListaMisTicketsPresenterRouterProtocol?
+    
+    weak var view: ListaMisTicketsViewController?
+    
+    weak var presenter: ListaMisTicketsPresenterRouterProtocol?
+    
+    init(view: ListaMisTicketsViewController? = nil, presenter: ListaMisTicketsPresenterRouterProtocol? = nil) {
+        self.view = view
+        self.presenter = presenter
+    }
 }
 
 extension ListaMisTicketsRouter: ListaMisTicketsRouterProtocol{

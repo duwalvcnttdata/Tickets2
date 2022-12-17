@@ -15,16 +15,12 @@ class ListaMisTicketsConfigurator{
             return ListaMisTicketsViewController()
         }
         let presenter = ListaMisTicketsPresenter()
-        let interactor = ListaMisTicketsInteractor()
-        let router = ListaMisTicketsRouter()
 
         view.presenter = presenter
 
-        interactor.api = ListaMisTicketsAPI()
-        interactor.presenter = presenter
+        let interactor = ListaMisTicketsInteractor(api: ListaMisTicketsAPI(), presenter: presenter)
 
-        router.view = view
-        router.presenter = presenter
+        let router = ListaMisTicketsRouter(view: view, presenter: presenter)
 
         presenter.interactor = interactor
         presenter.router = router

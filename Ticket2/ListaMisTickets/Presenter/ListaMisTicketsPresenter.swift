@@ -12,17 +12,17 @@ protocol ListaMisTicketsPresenterViewProtocol{
     func fetchDatosInteractor()
 }
 
-protocol ListaMisTicketsPresenterInteractorProtocol{
+protocol ListaMisTicketsPresenterInteractorProtocol: AnyObject{
     func montarEventos(eventos: [EventoEntity])
 }
 
-protocol ListaMisTicketsPresenterRouterProtocol{
+protocol ListaMisTicketsPresenterRouterProtocol: AnyObject{
     
 }
 
 
 class ListaMisTicketsPresenter{
-    var view: ListaMisTicketsViewControllerProtocol?
+    weak var view: ListaMisTicketsViewControllerProtocol?
     var interactor: ListaMisTicketsInteractorProtocol?
     var router: ListaMisTicketsRouterProtocol?
     

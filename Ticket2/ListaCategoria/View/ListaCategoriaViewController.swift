@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ListaCategoriaViewControllerProtocol{
+protocol ListaCategoriaViewControllerProtocol: AnyObject{
     func mostrarListadoEventos(_ listaEventos: [EventoEntity])
 }
 

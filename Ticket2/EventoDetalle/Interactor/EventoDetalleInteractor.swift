@@ -13,9 +13,14 @@ protocol EventoDetalleInteractorProtocol{
 
 class EventoDetalleIteractor {
     
-    var presenter: EventoDetallePresenterInteractorProtocol?
+    weak var presenter: EventoDetallePresenterInteractorProtocol?
     
     var api: EventosApiProtocol?
+    
+    init(presenter: EventoDetallePresenterInteractorProtocol? = nil, api: EventosApiProtocol? = nil) {
+        self.presenter = presenter
+        self.api = api
+    }
 }
 
 extension EventoDetalleIteractor: EventoDetalleInteractorProtocol{

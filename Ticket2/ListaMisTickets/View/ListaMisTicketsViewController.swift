@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ListaMisTicketsViewControllerProtocol{
+protocol ListaMisTicketsViewControllerProtocol: AnyObject{
     func montarEventos(eventos: [EventoEntity])
 }
 

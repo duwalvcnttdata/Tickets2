@@ -14,8 +14,13 @@ protocol CategoriasRouterProtocol {
 
 class CategoriasRouter: CategoriasRouterProtocol{
     
-    var view: UIViewController?
-    var presenter: CategoriasPresenterRouterProtocol?
+    weak var view: UIViewController?
+    weak var presenter: CategoriasPresenterRouterProtocol?
+    
+    init(view: UIViewController? = nil, presenter: CategoriasPresenterRouterProtocol? = nil) {
+        self.view = view
+        self.presenter = presenter
+    }
     
     func presentarListaCategoria(categoria: CategoriaEntity){
         print("presentarListaCategoria()")

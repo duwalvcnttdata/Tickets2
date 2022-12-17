@@ -12,8 +12,15 @@ protocol ListaMisTicketsInteractorProtocol{
 }
 
 class ListaMisTicketsInteractor{
+    
     var api: ListaMisTicketsApiProtocol?
-    var presenter: ListaMisTicketsPresenterInteractorProtocol?
+    
+    weak var presenter: ListaMisTicketsPresenterInteractorProtocol?
+    
+    init(api: ListaMisTicketsApiProtocol? = nil, presenter: ListaMisTicketsPresenterInteractorProtocol? = nil) {
+        self.api = api
+        self.presenter = presenter
+    }
 }
 
 extension ListaMisTicketsInteractor: ListaMisTicketsInteractorProtocol{

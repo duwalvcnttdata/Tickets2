@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol ListaCategoriaPresenterInteractorProtocol{
+protocol ListaCategoriaPresenterInteractorProtocol: AnyObject{
     func montarEventos(eventos: [EventoEntity])
 }
 
-protocol ListaCategoriaPresenterRouterProtocol{
+protocol ListaCategoriaPresenterRouterProtocol: AnyObject{
     
 }
 
@@ -22,7 +22,7 @@ protocol ListaCategoriaPresenterViewProtocol{
 
 class ListaCategoriaPresenter{
     var interactor: ListaCategoriaIteractorProtocol?
-    var view: ListaCategoriaViewControllerProtocol?
+    weak var view: ListaCategoriaViewControllerProtocol?
     var router: ListaCategoriaRouterProtocol?
 }
 

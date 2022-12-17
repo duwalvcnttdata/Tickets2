@@ -8,17 +8,14 @@ class ListaCategoriaConfigurator{
             return ListaCategoriaViewController()
         }
         let presenter = ListaCategoriaPresenter()
-        let interactor = ListaCategoriaIteractor()
-        let router = ListaCategoriaRouter()
 
         view.categoria = categoria
         view.presenter = presenter
 
-        interactor.api = EventosAPI()
-        interactor.presenter = presenter
+        let interactor = ListaCategoriaIteractor(presenter: presenter, api: EventosAPI())
 
-        router.view = view
-        router.presenter = presenter
+        
+        let router = ListaCategoriaRouter(view: view, presenter: presenter)
 
         presenter.interactor = interactor
         presenter.router = router

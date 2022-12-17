@@ -14,8 +14,15 @@ protocol ListaCategoriaRouterProtocol{
 }
 
 class ListaCategoriaRouter{
-    var view: UIViewController?
-    var presenter: ListaCategoriaPresenterRouterProtocol?
+    
+    weak var view: UIViewController?
+    
+    weak var presenter: ListaCategoriaPresenterRouterProtocol?
+    
+    init(view: UIViewController? = nil, presenter: ListaCategoriaPresenterRouterProtocol? = nil) {
+        self.view = view
+        self.presenter = presenter
+    }
 }
 
 extension ListaCategoriaRouter: ListaCategoriaRouterProtocol{

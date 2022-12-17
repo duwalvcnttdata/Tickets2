@@ -7,11 +7,11 @@
 
 import Foundation
 
-protocol CategoriasPresenterInteractorProtocol{
+protocol CategoriasPresenterInteractorProtocol: AnyObject{
     func montarListado(categorias categoriasEntity: [CategoriaEntity])
 }
 
-protocol CategoriasPresenterRouterProtocol{
+protocol CategoriasPresenterRouterProtocol: AnyObject{
     
 }
 
@@ -22,7 +22,7 @@ protocol CategoriasPresenterViewProtocol{
 
 class CategoriasPresenter {
     var interactor: CategoriasInteractorProtocol?
-    var view: CategoriasViewControllerProtocol?
+    weak var view: CategoriasViewControllerProtocol?
     var router: CategoriasRouterProtocol?
 }
 

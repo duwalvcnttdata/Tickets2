@@ -8,18 +8,13 @@ class EventoDetalleConfigurator{
             return EventoDetalleViewController()
         }
         let presenter = EventoDetallePresenter()
-        let router = EventoDetalleRouter()
 
-        let interactor = EventoDetalleIteractor()
-        
-        interactor.api = EventosAPI()
-        interactor.presenter = presenter
+        let interactor = EventoDetalleIteractor(presenter: presenter, api: EventosAPI())
         
         view.evento = evento
         view.presenter = presenter
 
-        router.view = view
-        router.presenter = presenter
+        let router = EventoDetalleRouter(view: view, presenter: presenter)
 
         presenter.router = router
         presenter.view = view

@@ -13,9 +13,14 @@ protocol ListaCategoriaIteractorProtocol{
 
 class ListaCategoriaIteractor {
     
-    var presenter: ListaCategoriaPresenterInteractorProtocol?
+    weak var presenter: ListaCategoriaPresenterInteractorProtocol?
     
     var api: EventosApiProtocol?
+    
+    init(presenter: ListaCategoriaPresenterInteractorProtocol? = nil, api: EventosApiProtocol? = nil) {
+        self.presenter = presenter
+        self.api = api
+    }
 }
 
 extension ListaCategoriaIteractor: ListaCategoriaIteractorProtocol{

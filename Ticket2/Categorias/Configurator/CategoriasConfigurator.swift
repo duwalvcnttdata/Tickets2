@@ -15,16 +15,12 @@ class CategoriasConfigurator{
             return CategoriasViewController()
         }
         let presenter = CategoriasPresenter()
-        let interactor = CategoriasInteractor()
-        let router = CategoriasRouter()
         
         view.presenter = presenter
         
-        interactor.api = CategoriasAPI()
-        interactor.presenter = presenter
+        let interactor = CategoriasInteractor(presenter: presenter, api: CategoriasAPI())
         
-        router.view = view
-        router.presenter = presenter
+        let router = CategoriasRouter(view: view, presenter: presenter)
         
         presenter.interactor = interactor
         presenter.router = router

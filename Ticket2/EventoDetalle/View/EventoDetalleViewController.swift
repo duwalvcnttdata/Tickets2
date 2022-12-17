@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-protocol EventoDetalleViewControllerProtocol{
+protocol EventoDetalleViewControllerProtocol: AnyObject{
     func montarDatos(evento: EventoEntity)
     func mostrarAlerta()
 }

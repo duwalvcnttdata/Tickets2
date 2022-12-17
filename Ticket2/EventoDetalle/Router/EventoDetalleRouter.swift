@@ -13,8 +13,13 @@ protocol EventoDetalleRouterProtocol{
 }
 
 class EventoDetalleRouter{
-    var view: UIViewController?
-    var presenter: EventoDetallePresenterRouterProtocol?
+    weak var view: UIViewController?
+    weak var presenter: EventoDetallePresenterRouterProtocol?
+    
+    init(view: UIViewController? = nil, presenter: EventoDetallePresenterRouterProtocol? = nil) {
+        self.view = view
+        self.presenter = presenter
+    }
 }
 
 extension EventoDetalleRouter: EventoDetalleRouterProtocol{

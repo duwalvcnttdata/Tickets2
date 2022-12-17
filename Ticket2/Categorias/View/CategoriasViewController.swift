@@ -8,7 +8,7 @@
 import UIKit
 
 
-protocol CategoriasViewControllerProtocol {
+protocol CategoriasViewControllerProtocol: AnyObject {
     func montarListado(_ listaCategorias: [CategoriaEntity])
 }
 
