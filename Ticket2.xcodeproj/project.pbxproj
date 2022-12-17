@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		6D2DD35F294CDDF600D73672 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6D2DD35E294CDDF600D73672 /* Kingfisher */; };
 		6D2DD361294D06A300D73672 /* EventoDetalleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD360294D06A300D73672 /* EventoDetalleInteractor.swift */; };
+		6D2DD370294D8C5B00D73672 /* ListaMisTicketsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD36F294D8C5B00D73672 /* ListaMisTicketsConfigurator.swift */; };
+		6D2DD372294D8CAE00D73672 /* ListaMisTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD371294D8CAE00D73672 /* ListaMisTicketsViewController.swift */; };
+		6D2DD374294D8CF000D73672 /* ListaMisTicketsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD373294D8CF000D73672 /* ListaMisTicketsInteractor.swift */; };
+		6D2DD376294D8D1900D73672 /* ListaMisTicketsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD375294D8D1900D73672 /* ListaMisTicketsPresenter.swift */; };
+		6D2DD378294D8D4000D73672 /* ListaMisTicketsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD377294D8D4000D73672 /* ListaMisTicketsRouter.swift */; };
+		6D2DD37A294D920D00D73672 /* MiEventoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2DD379294D920D00D73672 /* MiEventoTableViewCell.swift */; };
 		6DC11FAE294AA77600F8E57C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FAD294AA77600F8E57C /* AppDelegate.swift */; };
 		6DC11FB0294AA77600F8E57C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DC11FAF294AA77600F8E57C /* SceneDelegate.swift */; };
 		6DC11FB5294AA77600F8E57C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DC11FB3294AA77600F8E57C /* Main.storyboard */; };
@@ -39,6 +45,12 @@
 
 /* Begin PBXFileReference section */
 		6D2DD360294D06A300D73672 /* EventoDetalleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoDetalleInteractor.swift; sourceTree = "<group>"; };
+		6D2DD36F294D8C5B00D73672 /* ListaMisTicketsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMisTicketsConfigurator.swift; sourceTree = "<group>"; };
+		6D2DD371294D8CAE00D73672 /* ListaMisTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMisTicketsViewController.swift; sourceTree = "<group>"; };
+		6D2DD373294D8CF000D73672 /* ListaMisTicketsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMisTicketsInteractor.swift; sourceTree = "<group>"; };
+		6D2DD375294D8D1900D73672 /* ListaMisTicketsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMisTicketsPresenter.swift; sourceTree = "<group>"; };
+		6D2DD377294D8D4000D73672 /* ListaMisTicketsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaMisTicketsRouter.swift; sourceTree = "<group>"; };
+		6D2DD379294D920D00D73672 /* MiEventoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiEventoTableViewCell.swift; sourceTree = "<group>"; };
 		6DC11FAA294AA77600F8E57C /* Ticket2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ticket2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DC11FAD294AA77600F8E57C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DC11FAF294AA77600F8E57C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +93,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D2DD368294D897C00D73672 /* ListaMisTickets */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DD36E294D89DB00D73672 /* Configurator */,
+				6D2DD36D294D89D600D73672 /* View */,
+				6D2DD36C294D89CF00D73672 /* Interactor */,
+				6D2DD36B294D89C600D73672 /* Presenter */,
+				6D2DD36A294D89C000D73672 /* Entity */,
+				6D2DD369294D89BB00D73672 /* Router */,
+			);
+			path = ListaMisTickets;
+			sourceTree = "<group>";
+		};
+		6D2DD369294D89BB00D73672 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DD377294D8D4000D73672 /* ListaMisTicketsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		6D2DD36A294D89C000D73672 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		6D2DD36B294D89C600D73672 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DD375294D8D1900D73672 /* ListaMisTicketsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6D2DD36C294D89CF00D73672 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DD373294D8CF000D73672 /* ListaMisTicketsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		6D2DD36D294D89D600D73672 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DD371294D8CAE00D73672 /* ListaMisTicketsViewController.swift */,
+				6D2DD379294D920D00D73672 /* MiEventoTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6D2DD36E294D89DB00D73672 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DD36F294D8C5B00D73672 /* ListaMisTicketsConfigurator.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
 		6DC11FA1294AA77500F8E57C = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +178,7 @@
 				6DC11FC1294AA83400F8E57C /* Categorias */,
 				6DC11FDF294BBE6800F8E57C /* ListaCategoria */,
 				6DC11FF4294C16D700F8E57C /* EventoDetalle */,
+				6D2DD368294D897C00D73672 /* ListaMisTickets */,
 				6DC11FAD294AA77600F8E57C /* AppDelegate.swift */,
 				6DC11FAF294AA77600F8E57C /* SceneDelegate.swift */,
 				6DC11FB3294AA77600F8E57C /* Main.storyboard */,
@@ -398,11 +472,16 @@
 				6DC11FD9294AC9C500F8E57C /* Networking.swift in Sources */,
 				6DC11FCB294AAA3A00F8E57C /* CategoriaTableViewCell.swift in Sources */,
 				6DC11FE2294BBE9900F8E57C /* ListaCategoriaConfigurator.swift in Sources */,
+				6D2DD376294D8D1900D73672 /* ListaMisTicketsPresenter.swift in Sources */,
 				6DC11FCF294AB21C00F8E57C /* CategoriasPresenter.swift in Sources */,
+				6D2DD372294D8CAE00D73672 /* ListaMisTicketsViewController.swift in Sources */,
 				6DC11FB0294AA77600F8E57C /* SceneDelegate.swift in Sources */,
 				6DC11FDE294B968C00F8E57C /* CategoriasRouter.swift in Sources */,
 				6DF6072C294C219E0098E802 /* EventoDetallePresenter.swift in Sources */,
+				6D2DD37A294D920D00D73672 /* MiEventoTableViewCell.swift in Sources */,
+				6D2DD374294D8CF000D73672 /* ListaMisTicketsInteractor.swift in Sources */,
 				6DC11FD3294AC41500F8E57C /* CategoriaEntity.swift in Sources */,
+				6D2DD378294D8D4000D73672 /* ListaMisTicketsRouter.swift in Sources */,
 				6DC11FE5294BBF2600F8E57C /* ListaCategoriaViewController.swift in Sources */,
 				6DC11FD1294AB25500F8E57C /* CategoriasConfigurator.swift in Sources */,
 				6DC11FF1294C037E00F8E57C /* ListaCategoriaInteractor.swift in Sources */,
@@ -414,6 +493,7 @@
 				6DF6072E294C21CC0098E802 /* EventoDetalleRouter.swift in Sources */,
 				6DC11FCD294AB1E500F8E57C /* CategoriasIteractor.swift in Sources */,
 				6DC11FD6294AC99200F8E57C /* CategoriaResponse.swift in Sources */,
+				6D2DD370294D8C5B00D73672 /* ListaMisTicketsConfigurator.swift in Sources */,
 				6DC11FFC294C1F4800F8E57C /* EventoDetalleViewController.swift in Sources */,
 				6DF60730294C220E0098E802 /* EventoDetalleConfigurator.swift in Sources */,
 				6D2DD361294D06A300D73672 /* EventoDetalleInteractor.swift in Sources */,

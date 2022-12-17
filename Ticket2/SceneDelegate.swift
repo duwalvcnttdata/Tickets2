@@ -16,13 +16,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-//        guard let _ = (scene as? UIWindowScene) else { return }
+        //        guard let _ = (scene as? UIWindowScene) else { return }
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
+            
+            
+            let inicioNC = UINavigationController()
+            let inicioVC = ListaMisTicketsConfigurator.mostrarViewController()
+            inicioNC.viewControllers = [inicioVC]
+            inicioNC.navigationBar.prefersLargeTitles = true
+            let inicioBarItem = UITabBarItem(title: "Inicio", image: UIImage(systemName: "house"), tag: 1)
+            inicioVC.tabBarItem = inicioBarItem
+
+            
             let categoriaNC = UINavigationController()
             let categoriaVC = CategoriasConfigurator.mostrarViewController()
             categoriaNC.viewControllers = [categoriaVC]
-            window.rootViewController = categoriaNC
+            categoriaNC.navigationBar.prefersLargeTitles = true
+            let categoriaBarItem = UITabBarItem(title: "Categoria", image: UIImage(systemName: "ticket"), tag: 2)
+            categoriaVC.tabBarItem = categoriaBarItem
+            
+            let homeTabBar = UITabBarController()
+            homeTabBar.setViewControllers([inicioNC, categoriaNC], animated: true)
+            
+            window.rootViewController = homeTabBar
             self.window = window
             window.makeKeyAndVisible()
         }

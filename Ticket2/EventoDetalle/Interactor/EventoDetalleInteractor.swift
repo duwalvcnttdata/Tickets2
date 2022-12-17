@@ -24,11 +24,9 @@ extension EventoDetalleIteractor: EventoDetalleInteractorProtocol{
         api?.fetchPostEvento({ evento, error in
             if let evento = evento {
                 let eventoEntity = EventoEntity.mostrar([evento])
-                print(eventoEntity)
-                print("------- post evento")
                 self.presenter?.mostrarAlerta()
             }else{
-                print("-----"+(String(describing: error)))
+                print((String(describing: error)))
             }
         }, evento: evento)
         

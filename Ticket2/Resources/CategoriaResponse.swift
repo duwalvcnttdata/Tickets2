@@ -29,4 +29,3 @@ struct EventoResponse: Codable {
         case nombre, organizador, ubicacion, fecha, resumen
     }
 }
-

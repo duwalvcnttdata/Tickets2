@@ -317,6 +317,96 @@
             </objects>
             <point key="canvasLocation" x="2955" y="8"/>
         </scene>
+        <!--Bienvenido a Tickets-->
+        <scene sceneID="deA-gj-HfB">
+            <objects>
+                <viewController storyboardIdentifier="listaMisTicketsStoryboardID" id="VJF-JW-vU1" customClass="ListaMisTicketsViewController" customModule="Ticket2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="km4-sm-EfU">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TRk-Hm-wnl">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaTicketCompradoIdentifier" rowHeight="95" id="y99-Ub-3ao" customClass="MiEventoTableViewCell" customModule="Ticket2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y99-Ub-3ao" id="hQt-8O-Pq8">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Empresa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khf-HQ-ooa">
+                                                    <rect key="frame" x="20" y="37" width="67" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ubicacion del evento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6o-8Z-WEr">
+                                                    <rect key="frame" x="20" y="63" width="157" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nombre de Pelicula" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jl8-ya-qKl">
+                                                    <rect key="frame" x="20" y="11" width="187" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="91B-Fa-bnQ">
+                                                    <rect key="frame" x="360.33333333333331" y="13" width="12.666666666666686" height="16.666666666666664"/>
+                                                </imageView>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dd/mm/yyyy 00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5O-mJ-iBK">
+                                                    <rect key="frame" x="215" y="11" width="144" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="91B-Fa-bnQ" firstAttribute="leading" secondItem="O5O-mJ-iBK" secondAttribute="trailing" constant="1.3300000000000001" id="5GR-yR-3DE"/>
+                                                <constraint firstItem="O5O-mJ-iBK" firstAttribute="top" secondItem="hQt-8O-Pq8" secondAttribute="topMargin" id="90C-f7-0DD"/>
+                                                <constraint firstItem="jl8-ya-qKl" firstAttribute="leading" secondItem="hQt-8O-Pq8" secondAttribute="leadingMargin" id="I6X-Tf-MwW"/>
+                                                <constraint firstItem="A6o-8Z-WEr" firstAttribute="leading" secondItem="hQt-8O-Pq8" secondAttribute="leadingMargin" id="QcT-M8-Qku"/>
+                                                <constraint firstItem="Khf-HQ-ooa" firstAttribute="top" secondItem="jl8-ya-qKl" secondAttribute="bottom" constant="5" id="dCf-L1-JuS"/>
+                                                <constraint firstItem="91B-Fa-bnQ" firstAttribute="top" secondItem="hQt-8O-Pq8" secondAttribute="topMargin" id="f26-Eo-l7z"/>
+                                                <constraint firstItem="A6o-8Z-WEr" firstAttribute="top" secondItem="Khf-HQ-ooa" secondAttribute="bottom" constant="5" id="l5K-Db-TUW"/>
+                                                <constraint firstItem="O5O-mJ-iBK" firstAttribute="top" secondItem="hQt-8O-Pq8" secondAttribute="topMargin" id="mtM-wr-WgX"/>
+                                                <constraint firstItem="jl8-ya-qKl" firstAttribute="top" secondItem="hQt-8O-Pq8" secondAttribute="topMargin" id="oIR-jJ-SAT"/>
+                                                <constraint firstItem="A6o-8Z-WEr" firstAttribute="bottom" secondItem="hQt-8O-Pq8" secondAttribute="bottomMargin" id="pjM-qo-cWQ"/>
+                                                <constraint firstItem="Khf-HQ-ooa" firstAttribute="leading" secondItem="hQt-8O-Pq8" secondAttribute="leadingMargin" id="rGf-cG-Phj"/>
+                                                <constraint firstItem="91B-Fa-bnQ" firstAttribute="trailing" secondItem="hQt-8O-Pq8" secondAttribute="trailingMargin" id="ri2-Tz-j7V"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nombreLabel" destination="jl8-ya-qKl" id="AcU-wX-6Ef"/>
+                                            <outlet property="organizadorLabel" destination="Khf-HQ-ooa" id="F8O-Wl-k4U"/>
+                                            <outlet property="ubicacionLabel" destination="A6o-8Z-WEr" id="4dr-2g-J22"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7qx-N5-hFY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7qx-N5-hFY" firstAttribute="bottom" secondItem="TRk-Hm-wnl" secondAttribute="bottom" id="MnX-pk-aNy"/>
+                            <constraint firstItem="7qx-N5-hFY" firstAttribute="trailing" secondItem="TRk-Hm-wnl" secondAttribute="trailing" id="dfE-pY-P5k"/>
+                            <constraint firstItem="TRk-Hm-wnl" firstAttribute="top" secondItem="7qx-N5-hFY" secondAttribute="top" id="s8e-z5-csi"/>
+                            <constraint firstItem="TRk-Hm-wnl" firstAttribute="leading" secondItem="7qx-N5-hFY" secondAttribute="leading" id="xK0-E0-F40"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bienvenido a Tickets" id="8us-Lu-L5Z"/>
+                    <connections>
+                        <outlet property="ticketsCompradosTableView" destination="TRk-Hm-wnl" id="367-ZN-plr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QtJ-DD-J6k" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1261.8320610687022" y="-782.3943661971831"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="97" height="128"/>

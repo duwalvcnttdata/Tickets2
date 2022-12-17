@@ -27,7 +27,6 @@ class ListaCategoriaViewController: UIViewController {
         eventosTableView.delegate = self
         
         presenter?.fetchDatosInteractor(categoriaID: categoria!.codigo)
-        print("\(String(describing: categoria?.codigo))")
     }
 
 }

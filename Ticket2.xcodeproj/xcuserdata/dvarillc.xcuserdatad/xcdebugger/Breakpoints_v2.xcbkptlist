@@ -110,8 +110,8 @@
             filePath = "Ticket2/EventoDetalle/Interactor/EventoDetalleInteractor.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "fetchPostDatos(evento:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "Ticket2/Extras/Networking.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "fetchPostEvento(_:evento:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,16 +135,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "FDA49946-51A6-486B-870B-07886D42D4F0"
-            shouldBeEnabled = "No"
+            uuid = "614250BE-1828-4FE7-8E9F-FA2A6F0CB5C5"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Ticket2/Extras/Networking.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "fetchPostEvento(_:evento:)"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "fetchEventos(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F012931-4EBD-4158-9E40-BDE2C0ACB634"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Ticket2/ListaMisTickets/Interactor/ListaMisTicketsInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "fetchDatosInteractor()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
